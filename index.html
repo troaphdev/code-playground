@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dream Machine Code Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="blobs-container" id="blobsContainer"></div>
+  <div class="sidebar">
+    <div class="sidebar-icons">
+      <button title="Thumbs Up"><span>👍</span></button>
+      <button title="Grid"><span>🔲</span></button>
+    </div>
+    <div class="sidebar-icons">
+      <button title="Help"><span>❓</span></button>
+    </div>
+  </div>
+  <div class="main-content" id="mainContent">
+    <div class="left-column" id="leftColumn">
+      <div class="editor-card">
+        <div class="editor-card-header">HTML</div>
+        <div class="editor-card-content">
+          <textarea id="htmlCode" spellcheck="false">
+<h1>Hello, World!</h1>
+<p>This is a test paragraph.</p>
+          </textarea>
+        </div>
+      </div>
+      <div class="editor-card">
+        <div class="editor-card-header">JS</div>
+        <div class="editor-card-content">
+          <textarea id="jsCode" spellcheck="false">
+console.log("Hello from JavaScript!");
+          </textarea>
+        </div>
+      </div>
+    </div>
+    <div class="vertical-splitter" id="verticalSplitter"></div>
+    <div class="right-column" id="rightColumn">
+      <div class="css-panel" id="cssPanel">
+        <div class="editor-card" style="height: calc(100% - 2.5rem); margin: 0.5rem;">
+          <div class="editor-card-header">CSS Editor</div>
+          <div class="editor-card-content">
+            <textarea id="cssCode" spellcheck="false">
+body {
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: sans-serif;
+}
+h1 {
+  color: #f03;
+}
+            </textarea>
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-splitter" id="horizontalSplitter"></div>
+      <div class="preview-panel" id="previewPanel">
+        <div class="preview-title">Live Preview</div>
+        <iframe class="preview-iframe" id="previewFrame" srcdoc=""></iframe>
+      </div>
+    </div>
+  </div>
+  <button class="floating-button" id="runButton">RUN</button>
+  <script src="script.js"></script>
+</body>
+</html>
