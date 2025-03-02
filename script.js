@@ -1,3 +1,4 @@
+// Blob Animation
 const BLOB_COUNT = 5;
 const BLOB_MIN_SIZE = 200;
 const BLOB_MAX_SIZE = 500;
@@ -47,12 +48,7 @@ function applyBlobStyle(blob, state) {
   blob.style.height = state.size + 'px';
   blob.style.left = (state.x - half) + 'px';
   blob.style.top = (state.y - half) + 'px';
-  blob.style.background = `
-    radial-gradient(circle at 50% 50%,
-      rgba(${state.r}, ${state.g}, ${state.b}, ${state.a}) 0%,
-      transparent 70%
-    )
-  `;
+  blob.style.background = `radial-gradient(circle at 50% 50%, rgba(${state.r}, ${state.g}, ${state.b}, ${state.a}) 0%, transparent 70%)`;
 }
 const container = document.getElementById('blobsContainer');
 for (let i = 0; i < BLOB_COUNT; i++) {
@@ -68,6 +64,15 @@ setInterval(() => {
     applyBlobStyle(element, state);
   }
 }, INTERVAL_MS);
+
+// Sidebar expand/collapse
+const expandBtn = document.querySelector('.expand-sidebar-btn');
+const sidebar = document.querySelector('.sidebar');
+expandBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('expanded');
+});
+
+// Code Editor & Live Preview
 const runButton = document.getElementById("runButton");
 const htmlCode = document.getElementById("htmlCode");
 const cssCode = document.getElementById("cssCode");
@@ -79,6 +84,7 @@ const rightColumn = document.getElementById("rightColumn");
 const verticalSplitter = document.getElementById("verticalSplitter");
 const horizontalSplitter = document.getElementById("horizontalSplitter");
 const cssPanel = document.getElementById("cssPanel");
+
 runButton.addEventListener("click", () => {
   const combinedCode = `
 <!DOCTYPE html>
@@ -102,6 +108,8 @@ runButton.addEventListener("click", () => {
 window.addEventListener("DOMContentLoaded", () => {
   runButton.click();
 });
+
+// Drag Resizing (Vertical & Horizontal Splitters)
 let isDraggingVertical = false;
 let isDraggingHorizontal = false;
 let mainRect;

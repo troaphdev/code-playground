@@ -9,13 +9,23 @@
 <body>
   <div class="blobs-container" id="blobsContainer"></div>
   
-  <!-- Updated Sidebar matching My Websites Portal -->
+  <!-- Updated Sidebar matching your Portal -->
   <div class="sidebar">
+    <button class="expand-sidebar-btn">☰</button>
+    <hr class="sidebar-separator">
     <div class="sidebar-icons">
-      <!-- Home icon now navigates to the portal instead of reloading -->
-      <button onclick="window.location.href='https://troaphdev.github.io/'" title="Home">🏠</button>
-      <button onclick="window.location.href='https://troaphdev.github.io/worldnews'" title="World News">📰</button>
-      <button onclick="window.location.href='https://troaphdev.github.io/code-playground'" title="Code Playground">💻</button>
+      <button onclick="window.location.href='https://troaphdev.github.io/'" title="Home">
+        <span class="icon">🏠</span>
+        <span class="label">Home</span>
+      </button>
+      <button onclick="window.location.href='https://troaphdev.github.io/worldnews'" title="World News">
+        <span class="icon">📰</span>
+        <span class="label">World News</span>
+      </button>
+      <button onclick="window.location.href='https://troaphdev.github.io/code-playground'" title="Code Playground">
+        <span class="icon">💻</span>
+        <span class="label">Playground</span>
+      </button>
     </div>
   </div>
   
