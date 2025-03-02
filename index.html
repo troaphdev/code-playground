@@ -7,15 +7,17 @@
 </head>
 <body>
   <div class="blobs-container" id="blobsContainer"></div>
+  
+  <!-- Updated Sidebar matching My Websites Portal -->
   <div class="sidebar">
     <div class="sidebar-icons">
-      <button title="Thumbs Up"><span>👍</span></button>
-      <button title="Grid"><span>🔲</span></button>
-    </div>
-    <div class="sidebar-icons">
-      <button title="Help"><span>❓</span></button>
+      <!-- Home icon now navigates to the portal instead of reloading -->
+      <button onclick="window.location.href='https://troaphdev.github.io/'" title="Home">🏠</button>
+      <button onclick="window.location.href='https://troaphdev.github.io/worldnews'" title="World News">📰</button>
+      <button onclick="window.location.href='https://troaphdev.github.io/code-playground'" title="Code Playground">💻</button>
     </div>
   </div>
+  
   <div class="main-content" id="mainContent">
     <div class="left-column" id="leftColumn">
       <div class="editor-card">
@@ -62,6 +64,7 @@ h1 {
       </div>
     </div>
   </div>
+  
   <button class="floating-button" id="runButton">RUN</button>
   <script src="script.js"></script>
 </body>
