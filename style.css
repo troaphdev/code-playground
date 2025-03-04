@@ -283,9 +283,6 @@ textarea {
     margin-top: 0;
     width: 100%;
   }
-  .sidebar-icons button {
-    justify-content: flex-start;
-  }
   .main-content {
     width: 100%;
   }
